@@ -1,0 +1,168 @@
+:root {
+  --brand-dark: #234045;   /* deep green from logo */
+  --brand-blue: #567b99;   /* blue from logo */
+  --brand-light: #f6f7f8;
+}
+
+/* Base typography */
+body {
+  font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: #333;
+}
+
+h1, h2, h3,
+.navbar-brand,
+.brand-text {
+  font-family: "Montserrat", system-ui, sans-serif;
+}
+
+/* Logo sizing so it’s not huge */
+.logo {
+  max-height: 90px;  /* try 50–70px to taste */
+  height: auto;
+  width: auto;
+}
+
+/* Brand text in navbar */
+.brand-text {
+  font-size: 1rem;
+  color: var(--brand-dark);
+}
+
+/* Hero section */
+.hero-section {
+  background-color: #fff;
+}
+
+.hero-divider {
+  width: 120px;
+  border-top: 2px solid #ddd;
+}
+
+/* Grey placeholder blocks for images */
+.placeholder-box {
+  background: #e5e7eb;
+  border-radius: 4px;
+  width: 100%;
+  padding-top: 70%; /* aspect ratio */
+}
+
+/* Real product images */
+.product-img {
+  width: 100%;
+  height: 220px;      /* adjust height to what looks good */
+  object-fit: cover;  /* crops nicely */
+  border-radius: 4px 4px 0 0;
+}
+
+
+.product-hero {
+  padding-top: 75%;
+}
+
+.cart-thumb {
+  width: 80px;
+  padding-top: 60%;
+}
+
+/* Star rating text */
+.rating-stars {
+  letter-spacing: 1px;
+}
+
+/* Category cards on shop page */
+.category-card {
+  background: #fff;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+/* About text width */
+.lead-text {
+  max-width: 640px;
+}
+
+/* Checkout steps (cart / shipping / payment pages) */
+.checkout-steps {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.checkout-steps li {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.checkout-steps li.active {
+  font-weight: 600;
+  color: var(--brand-dark);
+  border-bottom: 2px solid var(--brand-dark);
+  padding-bottom: 0.25rem;
+}
+
+/* Review avatar circle */
+.review-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer links */
+.site-footer {
+  background-color: #fff;
+}
+
+.site-footer a {
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Back-to-top button */
+.back-to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 1050;
+}
+
+/* ===== Responsiveness ===== */
+
+/* Phones & small tablets */
+@media (max-width: 767.98px) {
+  .hero-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .checkout-steps {
+    gap: 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Large desktops */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aotearoa Adventure Gear – Shipping Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- UI framework: Bootstrap CSS (replace with local file for submission) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  />
+
+  <!-- Icon library (Bootstrap Icons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+
+  <!-- Google web fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom-site.css" />
+</head>
+<body id="top">
+  <!-- ===== Site header / navigation ===== -->
+  <header class="site-header border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+      <div class="container">
+        <!-- Logo + brand name -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="img/logo-aotearoa.png"
+            alt="Aotearoa Adventure Gear logo"
+            class="logo me-2"
+          />
+          <span class="fw-semibold brand-text">Aotearoa Adventure Gear</span>
+        </a>
+
+        <!-- Cart shortcut on small screens -->
+        <a href="cart.html" class="btn btn-dark d-lg-none ms-auto me-2">
+          <i class="bi bi-cart-fill me-1"></i> Your Cart
+          <span class="cart-count badge bg-light text-dark ms-1">0</span>
+        </a>
+
+        <!-- Mobile menu button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation links -->
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">About</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#help">Help</a>
+            </li>
+          </ul>
+
+          <!-- Simple search box (right side, large screens only) -->
+          <form class="d-none d-lg-flex ms-3" role="search">
+            <input
+              class="form-control form-control-sm"
+              type="search"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+
+          <!-- Cart button on large screens -->
+          <a href="cart.html" class="btn btn-dark ms-lg-3 d-none d-lg-inline-flex">
+            <i class="bi bi-cart-fill me-1"></i> Your Cart
+            <span class="cart-count badge bg-light text-dark ms-1">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== Page-specific content starts here ===== -->
+  <main class="py-5">
+    <div class="container">
+      <ol class="checkout-steps mb-4">
+        <li>1. Shopping Cart</li>
+        <li class="active">2. Shipping Details</li>
+        <li>3. Payment Options</li>
+      </ol>
+
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <h1 class="h4 mb-3">Shipping Details</h1>
+
+          <form class="row g-3" id="shippingForm">
+            <div class="col-md-6">
+              <label class="form-label small" for="firstName">First Name</label>
+              <input id="firstName" type="text" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small" for="lastName">Last Name</label>
+              <input id="lastName" type="text" class="form-control" required />
+            </div>
+
+            <div class="col-12">
+              <label class="form-label small" for="address1">Address</label>
+              <input id="address1" type="text" class="form-control" required />
+            </div>
+            <div class="col-12">
+              <label class="form-label small" for="address2">Address 2</label>
+              <input id="address2" type="text" class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label small" for="country">Country</label>
+              <select id="country" class="form-select" required>
+                <option value="">Select country</option>
+                <option value="NZ">New Zealand</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small" for="city">City</label>
+              <input id="city" type="text" class="form-control" required />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label small" for="postcode">Zip/Postal Code</label>
+              <input id="postcode" type="text" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small" for="phone">Phone Number</label>
+              <input id="phone" type="tel" class="form-control" required />
+            </div>
+
+            <!-- Shipping options -->
+            <div class="col-12">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="border rounded p-3 h-100">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="shippingOption"
+                        id="freeShipping"
+                        value="free"
+                        checked
+                      />
+                      <label
+                        class="form-check-label fw-semibold"
+                        for="freeShipping"
+                      >
+                        Free Shipping
+                      </label>
+                    </div>
+                    <small class="text-muted">Between 2–5 working days</small>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="border rounded p-3 h-100">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="shippingOption"
+                        id="expressShipping"
+                        value="express"
+                      />
+                      <label
+                        class="form-check-label fw-semibold"
+                        for="expressShipping"
+                      >
+                        Next Day Delivery – $20
+                      </label>
+                    </div>
+                    <small class="text-muted">24 hours from checkout</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 d-flex gap-2 mt-2">
+              <!-- submit button for JS validation -->
+              <button type="submit" class="btn btn-dark px-5">Next</button>
+              <a href="cart.html" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+          </form>
+        </div>
+
+        <!-- Summary sidebar -->
+        <aside class="col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="h5 mb-3">Summary</h2>
+
+              <!-- Product 1 -->
+              <div class="d-flex mb-2">
+                <div class="placeholder-box cart-thumb me-2"></div>
+                <div class="small flex-grow-1">
+                  <div>Kea Summit 3-Person Tent</div>
+                  <div class="text-muted">$549</div>
+                </div>
+              </div>
+
+              <!-- Product 2 -->
+              <div class="d-flex mb-3">
+                <div class="placeholder-box cart-thumb me-2"></div>
+                <div class="small flex-grow-1">
+                  <div>Kaimai Ridge 45L Pack</div>
+                  <div class="text-muted">$189</div>
+                </div>
+              </div>
+
+              <p class="small text-uppercase mt-3 mb-1">Have a voucher?</p>
+              <select class="form-select form-select-sm mb-3">
+                <option>None</option>
+                <option>WELCOME10</option>
+              </select>
+
+              <dl class="small mb-0">
+                <div class="d-flex justify-content-between">
+                  <dt>Subtotal</dt>
+                  <dd id="summarySubtotal">$738.00</dd>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <dt>Shipping</dt>
+                  <!-- normal shipping is $20; JS will change this to $0 when subtotal > 600 -->
+                  <dd id="summaryShipping" data-original-shipping="20">$20.00</dd>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <dt>Taxes</dt>
+                  <dd id="summaryTax">$13.00</dd>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between fw-semibold">
+                  <dt>Total</dt>
+                  <dd id="summaryTotal">$633.00</dd>
+                </div>
+              </dl>
+
+              <!-- Free-shipping note, hidden until the rule is triggered -->
+              <p id="freeShippingNote" class="small text-success mt-2 d-none">
+                Free standard shipping applied – orders over $600 ship free within
+                NZ.
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Footer (repeated across all pages) ===== -->
+  <footer class="site-footer border-top mt-5 pt-4 pb-3">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h6 class="text-uppercase small fw-semibold">Aotearoa Adventure Gear</h6>
+          <p class="mb-1">1717 Harrison St, Auckland, New Zealand</p>
+          <p class="mb-0">Email: info@aotearoaadventuregear.nz</p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h6 class="small text-uppercase fw-semibold">Main Menu</h6>
+          <ul class="list-unstyled small mb-0">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="index.html#help">Help</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2">
+          <h6 class="small text-uppercase fw-semibold">Discover</h6>
+          <ul class="list-unstyled small mb-0">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Brand Motto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="small text-uppercase fw-semibold">Find us on</h6>
+          <ul class="list-inline small mb-0">
+            <li class="list-inline-item"><a href="#">Facebook</a></li>
+            <li class="list-inline-item"><a href="#">Instagram</a></li>
+            <li class="list-inline-item"><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-3" />
+      <p class="small mb-0 text-center">
+        &copy; <span id="year"></span> Aotearoa Adventure Gear
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back-to-top anchor -->
+  <a href="#top" class="back-to-top btn btn-dark rounded-circle d-none">
+    <span class="visually-hidden">Back to top</span>
+    ↑
+  </a>
+
+  <!-- JS (framework + your file) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

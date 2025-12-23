@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aotearoa Adventure Gear – Aoraki Lite 2-Person Tent</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- UI framework: Bootstrap CSS (swap to local for submission) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  />
+
+  <!-- Icon library -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom-site.css" />
+</head>
+<body id="top">
+  <!-- ===== Header / navigation ===== -->
+  <header class="site-header border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="img/logo-aotearoa.png"
+            alt="Aotearoa Adventure Gear logo"
+            class="logo img-fluid me-2"
+          />
+          <span class="fw-semibold brand-text">Aotearoa Adventure Gear</span>
+        </a>
+
+        <!-- Cart on small screens -->
+        <a href="cart.html" class="btn btn-dark d-lg-none ms-auto me-2">
+          <i class="bi bi-cart-fill me-1"></i> Your Cart
+          <span class="cart-count badge bg-light text-dark ms-1">0</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#help">Help</a>
+            </li>
+          </ul>
+
+          <!-- Search + cart (large screens) -->
+          <form class="d-none d-lg-flex ms-3" role="search">
+            <input
+              class="form-control form-control-sm"
+              type="search"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+
+          <a href="cart.html" class="btn btn-dark ms-lg-3 d-none d-lg-inline-flex">
+            <i class="bi bi-cart-fill me-1"></i> Your Cart
+            <span class="cart-count badge bg-light text-dark ms-1">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== Main product content ===== -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Product image -->
+        <div class="col-md-6">
+          <img
+            src="img/aoraki-lite-tent-yellow.jpg"
+            alt="Yellow lightweight backpacking tent pitched beside a river"
+            class="product-img w-100"
+          />
+        </div>
+
+        <!-- Product details -->
+        <div class="col-md-6">
+          <h1 class="h2 mb-2">Aoraki Lite 2-Person Tent</h1>
+
+          <div class="d-flex align-items-center mb-2">
+            <span class="rating-stars me-2">★★★★☆</span>
+            <a href="#reviews" class="small text-decoration-underline">5 reviews</a>
+          </div>
+
+          <p class="h3 mb-3">$499.00</p>
+
+          <div class="mb-3">
+            <label for="modelSelect" class="form-label small text-uppercase">
+              Select model
+            </label>
+            <select
+              id="modelSelect"
+              class="form-select form-select-sm w-auto d-inline-block"
+            >
+              <option selected>Standard – 2 Person</option>
+              <option>Ultralight – 2 Person</option>
+              <option>Plus – 2 Person (extra vestibule)</option>
+            </select>
+          </div>
+
+          <p class="text-muted">
+            The Aoraki Lite 2-Person Tent is your go-to shelter when every gram counts.
+            A simple single-pole structure keeps setup fast, while the low weight and
+            small pack size mean it disappears into your pack. Ideal for thru-hikes,
+            bikepacking and overnight missions along Aotearoa’s great walks.
+          </p>
+
+          <button class="btn btn-dark mt-3 btn-add-to-cart">
+            Add To Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Similar Products ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="h4 mb-4">Similar Products</h2>
+        <div class="row g-4">
+          <!-- 1. Kea Summit 3-Person Tent -->
+          <div class="col-md-4">
+            <article class="card h-100 text-center">
+              <a href="shop.html" class="text-decoration-none text-dark">
+                <img
+                  src="img/kea-summit-tent-red.jpg"
+                  alt="Red three-person dome camping tent pitched on grass"
+                  class="card-img-top product-img"
+                />
+              </a>
+              <div class="card-body">
+                <h3 class="h6 mb-1">
+                  <a href="shop.html" class="text-decoration-none text-dark">
+                    Kea Summit 3-Person Tent
+                  </a>
+                </h3>
+                <div class="small rating-stars mb-1">★★★★★</div>
+                <p class="small text-muted mb-0">$549.00</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- 2. Tui Coastal 2-Person Tent -->
+          <div class="col-md-4">
+            <article class="card h-100 text-center">
+              <a href="shop.html" class="text-decoration-none text-dark">
+                <img
+                  src="img/tui-coastal-tent-green.jpg"
+                  alt="Green two-person camping tent pitched on sand"
+                  class="card-img-top product-img"
+                />
+              </a>
+              <div class="card-body">
+                <h3 class="h6 mb-1">
+                  <a href="shop.html" class="text-decoration-none text-dark">
+                    Tui Coastal 2-Person Tent
+                  </a>
+                </h3>
+                <div class="small rating-stars mb-1">★★★★☆</div>
+                <p class="small text-muted mb-0">$429.00</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- 3. Bushline Canvas Daypack -->
+          <div class="col-md-4">
+            <article class="card h-100 text-center">
+              <a href="shop.html" class="text-decoration-none text-dark">
+                <img
+                  src="img/bushline-canvas-daypack.jpg"
+                  alt="Green canvas daypack held in front of a leafy background"
+                  class="card-img-top product-img"
+                />
+              </a>
+              <div class="card-body">
+                <h3 class="h6 mb-1">
+                  <a href="shop.html" class="text-decoration-none text-dark">
+                    Bushline Canvas Daypack
+                  </a>
+                </h3>
+                <div class="small rating-stars mb-1">★★★★☆</div>
+                <p class="small text-muted mb-0">$149.00</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Reviews ===== -->
+    <section id="reviews" class="py-5">
+      <div class="container">
+        <h2 class="h4 mb-4">Reviews</h2>
+
+        <!-- Review 1 -->
+        <article class="mb-4 pb-4 border-bottom">
+          <div class="d-flex align-items-center mb-1">
+            <div class="review-avatar me-2">👤</div>
+            <div>
+              <h3 class="h6 mb-0">John Doe</h3>
+              <small class="text-muted">August 14, 2018</small>
+            </div>
+          </div>
+          <div class="small rating-stars mb-2">★★★★★</div>
+          <p class="mb-0">
+            Took the Aoraki Lite on the Tongariro Northern Circuit and it handled
+            heavy rain and strong wind with no problem. Super easy to pitch and
+            packs down really small in my pack.
+          </p>
+        </article>
+
+        <!-- Review 2 -->
+        <article class="mb-4 pb-4 border-bottom">
+          <div class="d-flex align-items-center mb-1">
+            <div class="review-avatar me-2">👤</div>
+            <div>
+              <h3 class="h6 mb-0">Jane Smith</h3>
+              <small class="text-muted">September 2, 2019</small>
+            </div>
+          </div>
+          <div class="small rating-stars mb-2">★★★★☆</div>
+          <p class="mb-0">
+            Great balance between weight and space. Perfect for two people and
+            gear on weekend trips. Only wish the vestibule was a little bigger,
+            but overall very happy.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer border-top mt-5 pt-4 pb-3">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h6 class="text-uppercase small fw-semibold">Aotearoa Adventure Gear</h6>
+          <p class="mb-1">1717 Harrison St, Auckland, New Zealand</p>
+          <p class="mb-0">Email: info@aotearoaadventuregear.nz</p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h6 class="small text-uppercase fw-semibold">Main Menu</h6>
+          <ul class="list-unstyled small mb-0">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="index.html#help">Help</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2">
+          <h6 class="small text-uppercase fw-semibold">Discover</h6>
+          <ul class="list-unstyled small mb-0">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Brand Motto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="small text-uppercase fw-semibold">Find us on</h6>
+          <ul class="list-inline small mb-0">
+            <li class="list-inline-item"><a href="#">Facebook</a></li>
+            <li class="list-inline-item"><a href="#">Instagram</a></li>
+            <li class="list-inline-item"><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-3" />
+      <p class="small mb-0 text-center">
+        &copy; <span id="year"></span> Aotearoa Adventure Gear
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back-to-top button -->
+  <a href="#top" class="back-to-top btn btn-dark rounded-circle d-none">
+    <span class="visually-hidden">Back to top</span>
+    ↑
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

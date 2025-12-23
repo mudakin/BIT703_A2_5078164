@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aotearoa Adventure Gear – Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- UI framework: Bootstrap CSS (replace with local file for submission) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  />
+
+  <!-- Icon library (Bootstrap Icons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+
+  <!-- Google web fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom-site.css" />
+</head>
+<body id="top">
+  <!-- ===== Site header / navigation ===== -->
+  <header class="site-header border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+      <div class="container">
+        <!-- Logo + brand name -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="img/logo-aotearoa.png"
+            alt="Aotearoa Adventure Gear logo"
+            class="logo me-2"
+          />
+          <span class="fw-semibold brand-text">Aotearoa Adventure Gear</span>
+        </a>
+
+        <!-- Cart shortcut on small screens -->
+        <a href="cart.html" class="btn btn-dark d-lg-none ms-auto me-2">
+          <i class="bi bi-cart-fill me-1"></i> Your Cart
+          <span class="cart-count badge bg-light text-dark ms-1">0</span>
+        </a>
+
+        <!-- Mobile menu button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation links -->
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="shop.html">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#help">Help</a></li>
+          </ul>
+
+          <!-- Simple search box (right side, large screens only) -->
+          <form class="d-none d-lg-flex ms-3" role="search">
+            <input
+              class="form-control form-control-sm"
+              type="search"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+
+          <!-- Cart button on large screens -->
+          <a href="cart.html" class="btn btn-dark ms-lg-3 d-none d-lg-inline-flex">
+            <i class="bi bi-cart-fill me-1"></i> Your Cart
+            <span class="cart-count badge bg-light text-dark ms-1">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== Page-specific content starts here ===== -->
+  <main>
+    <!-- Tagline + search bar -->
+    <section class="hero-section text-center py-5">
+      <div class="container">
+        <h1 class="display-5 fw-semibold mb-3">
+          Rugged gear for Aotearoa adventures
+        </h1>
+        <hr class="hero-divider mx-auto mb-4" />
+
+        <form class="row justify-content-center g-0 hero-search">
+          <div class="col-12 col-md-6">
+            <input
+              type="search"
+              class="form-control form-control-lg rounded-0 rounded-start"
+              placeholder="Search..."
+            />
+          </div>
+          <div class="col-12 col-md-auto">
+            <button
+              type="submit"
+              class="btn btn-dark btn-lg w-100 rounded-0 rounded-end"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Featured Categories row -->
+    <section class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="h3 mb-2">Featured Categories</h2>
+        <p class="small text-muted mb-4">
+          Start with our most popular ranges – lightweight tents, hard-wearing packs
+          and camp-ready accessories.
+        </p>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-6 col-md-3">
+            <div class="category-card h-100">
+              <div class="placeholder-box mb-2"></div>
+              <p class="small text-uppercase mb-0">Tents</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="category-card h-100">
+              <div class="placeholder-box mb-2"></div>
+              <p class="small text-uppercase mb-0">Packs</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="category-card h-100">
+              <div class="placeholder-box mb-2"></div>
+              <p class="small text-uppercase mb-0">Accessories</p>
+            </div>
+          </div>
+          <!-- Tall “Shop Now” card -->
+          <div class="col-6 col-md-3">
+            <a
+              class="btn btn-dark w-100 h-100 d-flex align-items-center justify-content-center"
+              href="#products"
+            >
+              Shop Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter strip -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center gy-3">
+          <div class="col-md-4">
+            <h2 class="h4 mb-2">Newsletter</h2>
+          </div>
+          <div class="col-md-8">
+            <form id="newsletterForm" class="row g-2 justify-content-md-end">
+              <div class="col-12 col-md-8">
+                <label for="newsletterEmail" class="visually-hidden">Email address</label>
+                <input
+                  id="newsletterEmail"
+                  type="email"
+                  class="form-control"
+                  placeholder="Email Address"
+                  required
+                />
+              </div>
+              <div class="col-12 col-md-auto">
+                <button type="submit" class="btn btn-dark w-100">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products area: left text, right 3x3 grid -->
+    <section id="products" class="py-5 bg-light">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Left column text -->
+          <div class="col-md-4 d-flex flex-column justify-content-between">
+            <div>
+              <h2 class="h3 mb-3">Explore Our Gear Range</h2>
+              <p class="small text-muted">
+                From overnight hut trips to long weekends in the backcountry, our tents,
+                packs and camp accessories are chosen to handle typical New Zealand
+                conditions – wet, windy and always changing.
+              </p>
+            </div>
+            <div class="mt-3">
+              <a href="#" class="btn btn-dark">Browse All</a>
+            </div>
+          </div>
+
+          <!-- Right column product grid -->
+          <div class="col-md-8">
+            <div class="row g-3">
+              <!-- 1. Kea Summit 3-Person Tent -->
+              <div class="col-sm-6 col-lg-4">
+                <article class="card h-100 text-center">
+                  <img
+                    src="img/kea-summit-tent-red.jpg"
+                    alt="Red three-person dome camping tent pitched on grass"
+                    class="card-img-top product-img"
+                  />
+                  <div class="card-body">
+                    <h3 class="h6">Kea Summit 3-Person Tent</h3>
+                    <p class="small text-muted mb-1">$549.00</p>
+                    <div class="small rating-stars">★★★★★</div>
+                    <button type="button" class="btn btn-outline-dark btn-sm mt-2 btn-add-to-cart">
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 2. Tui Coastal 2-Person Tent -->
+              <div class="col-sm-6 col-lg-4">
+                <article class="card h-100 text-center">
+                  <img
+                    src="img/tui-coastal-tent-green.jpg"
+                    alt="Green two-person camping tent pitched on sand"
+                    class="card-img-top product-img"
+                  />
+                  <div class="card-body">
+                    <h3 class="h6">Tui Coastal 2-Person Tent</h3>
+                    <p class="small text-muted mb-1">$429.00</p>
+                    <div class="small rating-stars">★★★★☆</div>
+                    <button type="button" class="btn btn-outline-dark btn-sm mt-2 btn-add-to-cart">
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 3. Aoraki Lite 2-Person Tent -->
+              <div class="col-sm-6 col-lg-4">
+                <article class="card h-100 text-center">
+                  <img
+                    src="img/aoraki-lite-tent-yellow.jpg"
+                    alt="Yellow lightweight backpacking tent pitched beside a river"
+                    class="card-img-top product-img"
+                  />
+                  <div class="card-body">
+                    <h3 class="h6">Aoraki Lite 2-Person Tent</h3>
+                    <p class="small text-muted mb-1">$499.00</p>
+                    <div class="small rating-stars">★★★★★</div>
+                    <button type="button" class="btn btn-outline-dark btn-sm mt-2 btn-add-to-cart">
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 4. Southern Ridge Canvas Pack -->
+              <div class="col-sm-6 col-lg-4">
+                <article class="card h-100 text-center">
+                  <img
+                    src="img/southern-ridge-canvas-pack.jpg"
+                    alt="Brown canvas hiking backpack with mountains in the background"
+                    class="card-img-top product-img"
+                  />
+                  <div class="card-body">
+                    <h3 class="h6">Southern Ridge Canvas Pack</h3>
+                    <div class="small rating-stars mb-1">★★★★☆</div>
+                    <p class="small text-muted mb-0">$169.00</p>
+                    <button type="button" class="btn btn-outline-dark btn-sm mt-2 btn-add-to-cart">
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 5. Kaimai Ridge 45L Pack -->
+              <div class="col-sm-6 col-lg-4">
+                <article class="card h-100 text-center">
+                  <img
+                    src="img/kaimai-ridge-pack.jpg"
+                    alt="Green hiking backpack with yellow straps beside a lake"
+                    class="card-img-top product-img"
+                  />
+                  <div class="card-body">
+                    <h3 class="h6">Kaimai Ridge 45L Pack</h3>
+                    <div class="small rating-stars mb-1">★★★★★</div>
+                    <p class="small text-muted mb-0">$189.00</p>
+                    <button type="button" class="btn btn-outline-dark btn-sm mt-2 btn-add-to-cart">
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 6. Kea Camp Enamel Mug -->
+              <div class="col-sm-6 col-lg-4">
+                <article class="card h-100 text-center">
+                  <img
+                    src="img/kea-camp-mug.jpg"
+                    alt="Orange enamel camping mug on a log"
+                    class="card-img-top product-img"
+                  />
+                  <div class="card-body">
+                    <h3 class="h6">Kea Camp Enamel Mug</h3>
+                    <div class="small rating-stars mb-1">★★★★☆</div>
+                    <p class="small text-muted mb-0">$29.00</p>
+                    <button type="button" class="btn btn-outline-dark btn-sm mt-2 btn-add-to-cart">
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 7. Rimu Trail Hatchet -->
+              <div class="col-sm-6 col-lg-4">
+                <article class="card h-100 text-center">
+                  <img
+                    src="img/rimu-trail-hatchet.jpg"
+                    alt="Camping hatchet with wooden handle lying in leaves"
+                    class="card-img-top product-img"
+                  />
+                  <div class="card-body">
+                    <h3 class="h6">Rimu Trail Hatchet</h3>
+                    <div class="small rating-stars mb-1">★★★★☆</div>
+                    <p class="small text-muted mb-0">$79.00</p>
+                    <button type="button" class="btn btn-outline-dark btn-sm mt-2 btn-add-to-cart">
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 8. Glowworm Camp Lantern -->
+              <div class="col-sm-6 col-lg-4">
+                <article class="card h-100 text-center">
+                  <img
+                    src="img/glowworm-camp-lantern.jpg"
+                    alt="Vintage-style camping lantern on a table"
+                    class="card-img-top product-img"
+                  />
+                  <div class="card-body">
+                    <h3 class="h6">Glowworm Camp Lantern</h3>
+                    <div class="small rating-stars mb-1">★★★☆☆</div>
+                    <p class="small text-muted mb-0">$59.00</p>
+                    <button type="button" class="btn btn-outline-dark btn-sm mt-2 btn-add-to-cart">
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 9. Bushline Canvas Daypack -->
+              <div class="col-sm-6 col-lg-4">
+                <article class="card h-100 text-center">
+                  <img
+                    src="img/bushline-canvas-daypack.jpg"
+                    alt="Green canvas daypack held in front of a leafy background"
+                    class="card-img-top product-img"
+                  />
+                  <div class="card-body">
+                    <h3 class="h6">Bushline Canvas Daypack</h3>
+                    <div class="small rating-stars mb-1">★★★★☆</div>
+                    <p class="small text-muted mb-0">$149.00</p>
+                    <button type="button" class="btn btn-outline-dark btn-sm mt-2 btn-add-to-cart">
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer border-top mt-5 pt-4 pb-3">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h6 class="text-uppercase small fw-semibold">Aotearoa Adventure Gear</h6>
+          <p class="mb-1">1717 Harrison St, Auckland, New Zealand</p>
+          <p class="mb-0">Email: info@aotearoaadventuregear.nz</p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h6 class="small text-uppercase fw-semibold">Main Menu</h6>
+          <ul class="list-unstyled small mb-0">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="index.html#help">Help</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2">
+          <h6 class="small text-uppercase fw-semibold">Discover</h6>
+          <ul class="list-unstyled small mb-0">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Brand Motto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="small text-uppercase fw-semibold">Find us on</h6>
+          <ul class="list-inline small mb-0">
+            <li class="list-inline-item"><a href="#">Facebook</a></li>
+            <li class="list-inline-item"><a href="#">Instagram</a></li>
+            <li class="list-inline-item"><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-3" />
+      <p class="small mb-0 text-center">
+        &copy; <span id="year"></span> Aotearoa Adventure Gear
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back-to-top anchor -->
+  <a href="#top" class="back-to-top btn btn-dark rounded-circle d-none">
+    <span class="visually-hidden">Back to top</span>
+    ↑
+  </a>
+
+  <!-- JS (framework + your file) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
